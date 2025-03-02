@@ -1,0 +1,47 @@
+import random
+
+
+keep_going=""
+while keep_going=="":
+    print("")
+    money_bet = int(input('How much money do you want to play with? '))
+    animals = ["cow", "horse", "tiger", "unicorn", "cat"]
+    animals = random.choice(animals)
+    print (animals)
+
+    if animals == "cow":
+        #cow will half your money
+        money_bet = money_bet / 2
+        print("Sorry you lost half! ")
+        print("-------------------")
+        print(money_bet)
+
+    if animals == "horse":
+        #horse will add one dollar
+        money_bet = money_bet + 1
+        print("You got a dollar! ")
+        print("-------------------")
+        print(money_bet)
+
+    if animals == "tiger":
+        #tiger will add 2 dollars
+        money_bet = money_bet + 2
+        print("You got two dollars! ")
+        print("-------------------")
+        print(money_bet)
+
+    if animals == "unicorn":
+        #unicorn will double your money
+        money_bet = money_bet + 2
+        print("You got two dollars! ")
+        print("-------------------")
+        print(money_bet)
+
+    if animals == "cat":
+     #cat will triple your money
+        money_bet = money_bet * 3
+        print("You got triple money! ")
+
+    #this code will ask the user if he wants to keep playing the game or quit
+    keep_going = input("press enter to go again, type anything to stop: ")
+print ("game over")
